@@ -4,7 +4,7 @@ Dwie strony, na których ambasadorki, ambasadorzy i sympatycy Ogólnopolskiej
 Strefy Talentu (OST) robią z własnego zdjęcia grafikę do posta albo story.
 Zdjęcie nie opuszcza przeglądarki.
 
-- Dla ambasadorów: [ost-ambasador.vercel.app/ambasador](https://ost-ambasador.vercel.app/ambasador/)
+- Dla ambasadorek i ambasadorów: [ost-ambasador.vercel.app/ambasador](https://ost-ambasador.vercel.app/ambasador/)
 - Dla wspierających: [ost-ambasador.vercel.app/wsparcie](https://ost-ambasador.vercel.app/wsparcie/)
 
 ## Skąd ten projekt
@@ -50,26 +50,30 @@ układają się w jedną kampanię. Przycisk „Oryginalne” zostawia kolory zd
 3. Wybierz format: post 4:5 (1080 × 1350 px) albo story 9:16
    (1080 × 1920 px).
 4. Przeciągnij zdjęcie na podglądzie, żeby ustawić kadr. Suwak powiększa
-   zdjęcie do trzech razy. Z klawiatury strzałki przesuwają zdjęcie, a plus i
-   minus zmieniają powiększenie.
-5. Zostaw „Kolory OST” albo wybierz „Oryginalne”.
-6. Pobierz grafikę. Plik PNG ma nazwę w rodzaju
+   zdjęcie do trzech razy. Gdy podgląd ma fokus, strzałki przesuwają
+   zdjęcie, a plus i minus zmieniają powiększenie. Zostaw „Kolory OST” albo
+   wybierz „Oryginalne”.
+5. Pobierz grafikę. Plik PNG ma nazwę w rodzaju
    `OST_ambasador_ambasadorka_post.png`.
 
 ## Prywatność
 
-Zdjęcie nie opuszcza urządzenia. Generatory nie mają serwera aplikacji, bazy
-danych ani logowania. Grafika powstaje w przeglądarce i trafia prosto do
-folderu z pobranymi plikami. Z zewnątrz strona pobiera tylko fonty z Google
-Fonts.
+Zdjęcie nie opuszcza urządzenia. Generatory nie wysyłają go na żaden serwer.
+Grafika powstaje w przeglądarce i trafia prosto do folderu z pobranymi
+plikami. Z zewnątrz strona pobiera tylko fonty z Google Fonts; bez internetu
+grafika użyje fontów systemowych.
+
+Gdy strona działa jako artefakt w Claude, plik zapisuje się przez wbudowane
+pobieranie Claude, a nie przez zwykły link.
 
 ## Technicznie
 
 Każdy generator to jeden plik `index.html` z HTML, CSS i JavaScriptem, bez
 zależności i bez kroku budowania. Do publikacji wystarczy dowolny hosting
-plików statycznych; wersja publiczna stoi na Vercelu.
+plików statycznych; wersja publiczna jest opublikowana na Vercelu.
 
-Oba pliki różnią się tylko tytułem, wstępem i wartością `version`, która
+Oba pliki różnią się tylko tytułem, opisem meta, nagłówkiem, wstępem oraz
+domyślnymi wartościami `version` i `slogan` w obiekcie `st`. `version`
 wybiera zestaw haseł. Zmianę wyglądu albo działania trzeba więc wprowadzić w
 obu plikach.
 
@@ -80,4 +84,5 @@ obu plikach.
 
 Identyfikację wizualną OST z konceptem „∀∃ Dla każdego istnieje”, pomysł na
 generatory i ich kod przygotowała **Konstancja Tanjga**.
+
 Portfolio: [konstancja-tanjga.github.io/portfolio-site](https://konstancja-tanjga.github.io/portfolio-site/)
