@@ -1,49 +1,88 @@
-# ∀∃ Generatory grafik Ogólnopolskiej Strefy Talentu
-### Ogólnopolska Strefa Talentu
+# Generatory grafik Ogólnopolskiej Strefy Talentu
 
-> Dla każdego ucznia istnieje talent.
-> A dla każdego, kto nas wspiera – jego własna grafika.
+Dwie strony, na których ambasadorki, ambasadorzy i sympatycy Ogólnopolskiej
+Strefy Talentu (OST) robią z własnego zdjęcia grafikę do posta albo story.
+Zdjęcie nie opuszcza przeglądarki.
 
-## Jak to się zaczęło
+- Dla ambasadorek i ambasadorów: [ost-ambasador.vercel.app/ambasador](https://ost-ambasador.vercel.app/ambasador/)
+- Dla wspierających: [ost-ambasador.vercel.app/wsparcie](https://ost-ambasador.vercel.app/wsparcie/)
 
-Ogólnopolska Strefa Talentu poprosiła kilkanaście osób o wsparcie: wrzućcie post od siebie, powiedzcie znajomym, że rusza program. Szybko padło pytanie: „A może jakaś ramka, w którą wstawię swoje zdjęcie?”.
+## Skąd ten projekt
 
-Pierwsza wersja ramki wyglądała tak, że każdy ambasador miałby na szyi koralowy pasek. Trochę jak cenzura w kryminale. Druga wersja wymagała programu graficznego i cierpliwości, a kilkanaście osób to kilkanaście pytań „gdzie mam kliknąć?”.
+OST poprosiła kilkanaście osób, żeby ogłosiły start programu w swoich mediach
+społecznościowych. Część z nich zapytała o ramkę, w którą mogłyby wstawić
+swoje zdjęcie.
 
-Wtedy wpadłam na pomysł: zamiast wysyłać ludziom plik do składania, dajmy im narzędzie, które zrobi to za nich. Jedna strona, jedno zdjęcie, trzy kliknięcia i gotowe.
+W pierwszej wersji ramki koralowy pasek przechodził ambasadorowi przez szyję
+jak pasek cenzury w kryminale. Druga wersja wymagała programu graficznego, a
+kilkanaście osób oznaczało kilkanaście pytań „gdzie mam kliknąć?”. Zamiast
+pliku do samodzielnego składania zrobiłam więc narzędzie, które składa
+grafikę samo: wgrywasz zdjęcie, wybierasz hasło i format, pobierasz PNG.
 
-## Co tu się dzieje
+## Jak zbudowana jest grafika
 
-Znak OST to dwa symbole z logiki: **∀** – „dla każdego” i **∃** – „istnieje”. Razem czytamy je: *dla każdego ucznia istnieje talent*.
+Znak OST składa się z dwóch symboli logiki: **∀** („dla każdego”) i **∃**
+(„istnieje”). Razem czytają się jako hasło programu: *dla każdego ucznia
+istnieje talent*.
 
-W generatorze zdjęcie staje w ramie ∃. To osoba, która mówi: istnieje taki program i ja go wspieram. Dlatego żaden element graficzny nie wchodzi na zdjęcie – twarz zostaje nietknięta, koralowa kreska ucznia stoi obok, nad hasłem.
+Zdjęcie stoi w ramie ∃, bo osoba na zdjęciu mówi, że taki program istnieje i
+że go wspiera. Żaden element graficzny nie zachodzi na zdjęcie, więc twarz
+zostaje nietknięta. Koralowa kreska ucznia stoi obok zdjęcia, nad hasłem. Na
+dole grafiki są podpis „Bo dla każdego ucznia istnieje talent.” i adres
+www.ost.edu.pl.
 
-Zdjęcia robione telefonem, na konferencji, w ogrodzie i w pokoju nauczycielskim zwykle nie pasują do siebie. Generator nakłada na nie duotone w kolorach OST – granat i ciepłą biel – więc kilkanaście różnych postów wygląda jak jedna kampania. Kto woli swoje kolory, może je zostawić.
+Zdjęcia z telefonu, z konferencji, z ogrodu i z pokoju nauczycielskiego nie
+pasują do siebie kolorem. Generator domyślnie nakłada na nie duotone w
+kolorach OST, granacie i ciepłej bieli, dzięki czemu posty kilkunastu osób
+układają się w jedną kampanię. Przycisk „Oryginalne” zostawia kolory zdjęcia.
 
 ## Dwa generatory
 
-- **`/ambasador`** – dla ambasadorek i ambasadorów programu. Hasła: *Jestem ambasadorką* albo *Jestem ambasadorem Ogólnopolskiej Strefy Talentu*.
-- **`/wsparcie`** – dla wszystkich, którzy chcą pokazać, że są z nami. Hasła: *Wspieram*, *Kibicuję* albo *Popieram*.
+| Strona | Dla kogo | Hasło na grafice |
+| --- | --- | --- |
+| `/ambasador` | Ambasadorki i ambasadorzy programu | „Jestem ambasadorką Ogólnopolskiej Strefy Talentu.” albo „Jestem ambasadorem Ogólnopolskiej Strefy Talentu.” |
+| `/wsparcie` | Wszyscy, którzy chcą pokazać, że są z nami | „Wspieram inicjatywę Ogólnopolska Strefa Talentu.”, „Kibicuję Ogólnopolskiej Strefie Talentu.” albo „Popieram Ogólnopolską Strefę Talentu.” |
 
 ## Jak użyć
 
-1. Wgraj zdjęcie – najlepiej pionowe, z twarzą w górnej części.
+1. Wgraj zdjęcie, najlepiej pionowe, z twarzą w górnej części kadru.
 2. Wybierz hasło.
-3. Wybierz format: post 4:5 albo story 9:16.
-4. Przeciągnij zdjęcie, żeby ustawić kadr. Suwak zmienia powiększenie.
-5. Pobierz PNG i opublikuj.
+3. Wybierz format: post 4:5 (1080 × 1350 px) albo story 9:16
+   (1080 × 1920 px).
+4. Przeciągnij zdjęcie na podglądzie, żeby ustawić kadr. Suwak powiększa
+   zdjęcie do trzech razy. Gdy podgląd ma fokus, strzałki przesuwają
+   zdjęcie, a plus i minus zmieniają powiększenie. Zostaw „Kolory OST” albo
+   wybierz „Oryginalne”.
+5. Pobierz grafikę. Plik PNG ma nazwę w rodzaju
+   `OST_ambasador_ambasadorka_post.png`.
 
 ## Prywatność
 
-Zdjęcie nie opuszcza Twojego urządzenia. Nie ma serwera, bazy danych ani logowania. Grafika powstaje w przeglądarce i trafia prosto do Twojego folderu „Pobrane”.
+Zdjęcie nie opuszcza urządzenia. Generatory nie wysyłają go na żaden serwer.
+Grafika powstaje w przeglądarce i trafia prosto do folderu z pobranymi
+plikami. Z zewnątrz strona pobiera tylko fonty z Google Fonts; bez internetu
+grafika użyje fontów systemowych.
+
+Gdy strona działa jako artefakt w Claude, plik zapisuje się przez wbudowane
+pobieranie Claude, a nie przez zwykły link.
 
 ## Technicznie
 
-Dwa pliki `index.html` – po jednym w folderze każdego generatora. Bez frameworków, bez budowania, bez instalacji. Działa na GitHub Pages, Vercel i wszędzie tam, gdzie da się wrzucić plik HTML.
+Każdy generator to jeden plik `index.html` z HTML, CSS i JavaScriptem, bez
+zależności i bez kroku budowania. Do publikacji wystarczy dowolny hosting
+plików statycznych; wersja publiczna jest opublikowana na Vercelu.
+
+Oba pliki różnią się tylko tytułem, opisem meta, nagłówkiem, wstępem oraz
+domyślnymi wartościami `version` i `slogan` w obiekcie `st`. `version`
+wybiera zestaw haseł. Zmianę wyglądu albo działania trzeba więc wprowadzić w
+obu plikach.
+
+Żeby uruchomić generator lokalnie, otwórz `ambasador/index.html` albo
+`wsparcie/index.html` w przeglądarce.
 
 ## Autorka
 
-Pomysł, identyfikacja wizualna OST i generatory: **Konstancja Tanjga**
-[konstancja-tanjga.github.io/portfolio-site](https://konstancja-tanjga.github.io/portfolio-site/)
+Identyfikację wizualną OST z konceptem „∀∃ Dla każdego istnieje”, pomysł na
+generatory i ich kod przygotowała **Konstancja Tanjga**.
 
-Identyfikacja wizualna Ogólnopolskiej Strefy Talentu, koncept „∀∃ Dla każdego istnieje”.
+Portfolio: [konstancja-tanjga.github.io/portfolio-site](https://konstancja-tanjga.github.io/portfolio-site/)
